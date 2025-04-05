@@ -14,7 +14,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route
-          path="/aidoctor"
+          path="/aidoctor/"
           element={
             <motion.div
               initial={{ opacity: 0, x: 100 }}
@@ -63,7 +63,10 @@ function App() {
   return (
     <Router>
       <div className='mx-20'>
-        <Header />
+        <div className='sticky top-0 z-50'>
+          <Header />
+        </div>
+        
         <AnimatedRoutes />
         <Footer />
       </div>
